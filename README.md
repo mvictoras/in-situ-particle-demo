@@ -2,16 +2,12 @@
 
 This repository contains a minimal example of a **particle simulation** using **MPI**, **Conduit**, and **Ascent** for in-situ visualization on HPC systems. Particles are initialized randomly inside a sphere of radius \(R\), move with a fixed velocity magnitude \(u\), and “bounce” off the sphere’s boundary. Each timestep, simulation data is published to Ascent for visualization.
 
----
-
 ## Features
 
 - **MPI Parallel**: Particles are split across MPI ranks.  
 - **Conduit-Based**: Particle data is stored in Conduit [Blueprint](https://llnl-conduit.readthedocs.io/en/latest/blueprint.html) format.  
 - **Ascent In-Situ Visualization**: Pseudocolor plots of velocity magnitude are generated and saved as images each timestep.  
 - **Sphere Boundary Reflection**: Particles reflect off a spherical boundary to remain within the domain.
-
----
 
 ## Build Instructions
 
