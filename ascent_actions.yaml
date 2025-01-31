@@ -1,0 +1,28 @@
+-
+  action: "add_pipelines"
+  pipelines:
+    pl1:
+      f1:
+        type: "threshold"
+        params:
+          field: "velocity_magnitude"
+          min_value: 0.0
+          max_value: 40.0
+- 
+  action: add_scenes
+  scenes:
+    wire_scene:
+      plots:
+        p1:
+          type: pseudocolor
+          field: velocity_magnitude
+          points:
+            radius: 0.1
+          pipeline: "pl1"
+      renders:
+        r1:
+          image_prefix: render_%06d
+          image_width: 1920
+          image_height: 1080
+          world_annotations: false
+          screen_annotations: false
